@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import drink from "../assets/drink.png";
-import search from "../assets/search.png";
-import plus from "../assets/plus.png";
-import bg_1 from "../assets/bg_1.png";
 import bg_2 from "../assets/bg_2.png";
-import moon from "../assets/moon.png";
-import sun from "../assets/sun.png";
+import { FaSun, FaMoon } from "react-icons/fa6";
+import { IoSearch } from "react-icons/io5";
 
 function Nav({
   onSearch,
@@ -25,7 +21,7 @@ function Nav({
 
   return (
     <nav>
-      <div className="flex w-full font-outfit text-xl bg-stone-900 text-stone-100 py-5 px-8">
+      <div className="flex w-full font-outfit text-xl bg-stone-900 text-stone-100 py-3 px-5">
         <div className="w-full flex gap-10">
           {" "}
           <button
@@ -53,9 +49,9 @@ function Nav({
           className="p-3 bg-stone-300 dark:bg-stone-950 hover:bg-stone-300 dark:hover:bg-stone-800 text-lg rounded-full transition-all active:scale-95 shadow-sm "
         >
           {isDarkMode ? (
-            <img src={sun} className="w-6" />
+            <FaSun className="text-stone-300" />
           ) : (
-            <img src={moon} className="w-6" />
+            <FaMoon className="text-stone-800" />
           )}
         </button>
       </div>
@@ -86,9 +82,9 @@ function Nav({
           />
           <button
             type="submit"
-            className="font-outfit px-4 py-4 border border-stone-900 bg-stone-900 hover:bg-stone-800 active:scale-95 text-stone-50 text-base dark:bg-stone-700"
+            className="font-outfit px-3 py-3 border border-stone-900 bg-stone-900 hover:bg-stone-800 active:scale-95 text-stone-50 text-base dark:bg-stone-700"
           >
-            <img src={search} className="w-6" />
+            <IoSearch className="h-6 w-6" />
           </button>
         </form>
 

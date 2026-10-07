@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import plus from "../assets/plus.png";
-import on from "../assets/on.png";
-import off from "../assets/off.png";
+import { FiPlus } from "react-icons/fi";
+
+import { FaBookmark, FaRegBookmark } from "react-icons/fa6";
 
 export default function CocktailCard({ data, isBookmarked, onToggleBookmark }) {
   if (!data) return null;
@@ -15,7 +15,6 @@ export default function CocktailCard({ data, isBookmarked, onToggleBookmark }) {
   // false: 앞면, true: 정보
   const [showInfo, setShowInfo] = useState(false);
 
-  // 재료와 계량(Measure) 정보를 묶어서 정밀 가공
   const ingredients = [];
   for (let i = 1; i <= 15; i++) {
     const ingredient = data[`strIngredient${i}`];
@@ -46,7 +45,7 @@ export default function CocktailCard({ data, isBookmarked, onToggleBookmark }) {
             onClick={() => setShowInfo(true)}
             className="absolute top-4 right-4 px-3 py-3 bg-stone-800 hover:bg-stone-950 text-stone-100 text-sm font-semibold tracking-wider  transition-colors z-5 opacity-75 cursor-pointer"
           >
-            <img src={plus} alt="" className="w-5" />
+            <FiPlus className="w-5 h-5" />
           </button>
         </div>
 
@@ -66,9 +65,9 @@ export default function CocktailCard({ data, isBookmarked, onToggleBookmark }) {
               className="h-9 transition-all cursor-pointe"
             >
               {isBookmarked ? (
-                <img src={on} className="w-6" />
+                <FaBookmark className="w-6 h-6 text-stone-800 dark:text-stone-200" />
               ) : (
-                <img src={off} className="w-6" />
+                <FaRegBookmark className="w-6 h-6 text-stone-800 dark:text-stone-200" />
               )}
             </button>
           </div>

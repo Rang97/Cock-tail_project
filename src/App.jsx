@@ -89,7 +89,7 @@ function App() {
     staleTime: Infinity,
   });
 
-  // 탠스택 무한 스크롤 쿼리 세팅 (검색어가 없을 때만 작동)
+  // 탠스택 무한 스크롤
   const infiniteQuery = useInfiniteQuery({
     queryKey: ["official-infinite-cocktails"],
     queryFn: fetchCocktails,
@@ -102,7 +102,6 @@ function App() {
     enabled: !searchKeyword && !selectedIngredient,
   });
 
-  // 검색 전용 단일 쿼리 세팅 (검색어가 있을 때만 작동)
   const searchQuery = useQuery({
     queryKey: ["search-cocktails", searchKeyword],
     queryFn: () => fetchSearchCocktails(searchKeyword),
