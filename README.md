@@ -1,6 +1,6 @@
-# Cocktail
+# Cock-tail
 
-TheCocktailDB API를 활용한 칵테일 탐색 React 앱
+`TheCocktailDB API`를 활용한 다양한 칵테일을 둘러보고 원하는 칵테일 검색 및 저장할 수 있는 웹 애플리케이션입니다.
 
 ## 주요 기능
 
@@ -18,22 +18,6 @@ TheCocktailDB API를 활용한 칵테일 탐색 React 앱
 - TanStack React Query
 - Axios
 - Tailwind CSS
-- react-intersection-observer
-
-## 실행 방법
-
-1. 의존성 설치
-   ```bash
-   npm install
-   ```
-2. 개발 서버 실행
-   ```bash
-   npm run dev
-   ```
-3. 브라우저에서 아래 주소로 접속
-   ```text
-   http://localhost:5173
-   ```
 
 ## 빌드
 
@@ -43,5 +27,5 @@ npm run build
 
 ## 참고
 
-- 칵테일 데이터는 TheCocktailDB API를 사용
-- 북마크 정보는 브라우저의 localStorage에 저장
+- 칵테일 데이터는` TheCocktailDB API`를
+- 북마크 정보는 브라우저의 `localStorage`에 저장
