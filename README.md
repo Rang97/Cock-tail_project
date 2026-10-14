@@ -45,13 +45,12 @@ npm run dev
 
 ```
 Cock-tail_project/
-├── public/            # 정적 파일
 ├── src/
-│   ├── api/           # API 호출 (Axios)
-│   ├── components/    # 재사용 컴포넌트
-│   ├── hooks/         # 커스텀 훅 (React Query, 무한 스크롤 등)
-│   ├── pages/         # 페이지 단위 컴포넌트
-│   └── main.jsx       # 진입점
+│   ├── assets/          # 이미지 등 정적 리소스
+│   ├── components/      # UI 컴포넌트
+│   ├── App.jsx          # 루트 컴포넌트
+│   ├── index.css        # 전역 스타일 (Tailwind)
+│   └── main.jsx         # 진입점
 ├── index.html
 ├── vite.config.js
 ├── eslint.config.js
